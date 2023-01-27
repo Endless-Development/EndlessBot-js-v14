@@ -1,2 +1,12 @@
 # EndlessBot-js-v14
 New js Discord bot for our server, using v14 Discord.js API
+Remake of the v13 bot, but will have new features
+
+## APIs (Node.js)
+| Dependencies | Version |
+| ------------- | ------------- |
+| discord.js | v14.7.1 |
+| @discordjs/rest | v1.5.0 |
+| dotenv | v16.0.3 |
+| colors | v1.4.0 |
+| fs | v0.0.1-security |
