@@ -7,6 +7,7 @@ Remake of the v13 bot, but will have new features
 | ------------- | ------------- |
 | discord.js | v14.7.1 |
 | @discordjs/rest | v1.5.0 |
+| @discordjs/builders | v1.4.0 |
 | discord-api-types | v0.37.30 |
 | dotenv | v16.0.3 |
 | colors | v1.4.0 |
