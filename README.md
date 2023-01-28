@@ -14,3 +14,4 @@ Remake of the v13 bot, but will have new features
 | fs | v0.0.1-security |
 | ascii-table | v0.0.9 |
 | path | v0.12.7 |
+| canvacord | v5.4.8 |
