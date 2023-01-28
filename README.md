@@ -12,3 +12,4 @@ Remake of the v13 bot, but will have new features
 | dotenv | v16.0.3 |
 | colors | v1.4.0 |
 | fs | v0.0.1-security |
+| ascii-table | v0.0.9 |
