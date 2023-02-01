@@ -2,23 +2,56 @@ const Logger = require("../Logger");
 const fs = require("fs");
 const path = require("path");
 const config = require("../../data/config.json");
+const levelSchema = require("../schemas/level");
+const { EmbedBuilder } = require("@discordjs/builders");
 
 module.exports = {
     name: 'messageCreate',
-    execute(message)
+    async execute(message)
     {
-        if (!config.enableLeveling) return;
-
         // Leveling system
+        if (!config.enableLeveling) return;
         if (message.author.bot || !message.guild) return;
         if (message.guild.id != process.env.GUILD_ID) return;
 
-        var data = JSON.parse(fs.readFileSync(path.resolve(__dirname + "../../../data", 'leveling.json')));
+        levelSchema.findOne({ Guild: guild.id, User: author.id}, async (err, data) => {
+            
+            if (err) throw err;
 
-        if (data[message.author.id] == null) data[message.author.id] = 1;
-        else data[message.author.id]++;
+            if (!data) {
+                levelSchema.create({
+                    Guild: guild.id,
+                    User: author.id,
+                    XP: 0,
+                    Level: 0,
+                })
+            }
+        })
 
-        var newData = JSON.stringify(data);
-        fs.writeFileSync(path.resolve(__dirname + "../../../data", 'leveling.json'), newData);
+        const channel = message.channel;
+        const give = 1;
+        const data = await levelSchema.findOne({ Guild: guild.id, User: author.id});
+
+        if (!data) return;
+
+        const requiredXP = data.Level * data.Level * 20 + 20;
+
+        if (data.XP + give >= requiredXP) {
+            data.XP += give;
+            data.Level += 1;
+            await data.save();
+
+            if (!channel) return;
+
+            const embed = new EmbedBuilder()
+            .setColor(0xF71818)
+            .setDescription(`${author}, hai raggiunto il livello ${data.Level}`)
+
+            channel.send({ embeds: [embed] });
+        }
+        else {
+            data.XP += give;
+            data.save();
+        }
     }
 }
