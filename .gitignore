@@ -1,2 +1,4 @@
 # npm packages
 node_modules
+.env
+.gitignore
