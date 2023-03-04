@@ -1,0 +1,8 @@
+# npm packages
+node_modules
+
+# other files
+.env
+.gitignore
+package.json
+package-lock.json
