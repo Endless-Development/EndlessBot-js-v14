@@ -1,0 +1,29 @@
+{
+    "errors": {
+        "targetNotFound": "Utente non trovato",
+        "targetIsBot": "Non puoi farlo a un bot.",
+        "durationInvalid": "Hai inserito una durata non valida.",
+        "durationInvalidLength": "La durata deve essere compresa tra {min} e {max}.",
+        "rolePriority": "Non puoi farlo a un membro il cui ruolo ha una priorità maggiore o uguale alla tua."
+    },
+    "timeout": {
+        "name": "timeout",
+        "desc": "Metti un utente in timeout.",
+        "options": {
+            "user": "utente",
+            "userDesc": "L'utente che metti in timeout.",
+            "duration": "durata",
+            "durationDesc": "Quanto durerà (Esempio: 5d 2h)",
+            "reason": "motivo",
+            "reasonDesc": "Perchè lo stai mettendo in timeout?"
+        },
+        "noReason": "Nessun motivo specificato.",
+        "stafferMessage": "Hai messo {member} in timeout per {duration}",
+        "embed": {
+            "title": "Timeout",
+            "target": "Utente",
+            "duration": "Durata",
+            "reason": "Motivo"
+        }
+    }
+}

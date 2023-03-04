@@ -1,0 +1,13 @@
+{
+    "botStatus": "discord.io/endlessnet",
+    "embedColor": "#f71818",
+    "langFile": "lang_it.json",
+
+    "timeout": {
+        "enableLogChannel": true,
+        "logChannelID": 885121887368257539,
+        "logEmbedColor": "#383231",
+        "minDuration": 5000,
+        "maxDuration": 2.419e9
+    }
+}

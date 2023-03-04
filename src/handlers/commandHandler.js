@@ -1,6 +1,6 @@
 const Logger = require("../Logger");
 
-function loadCommands(client)
+async function loadCommands(client)
 {
     const ascii = require('ascii-table');
     const fs = require('fs');

@@ -1,0 +1,29 @@
+{
+    "errors": {
+        "targetNotFound": "User not found",
+        "targetIsBot": "I can't perform this action on a bot.",
+        "durationInvalid": "The duration you entered was invalid.",
+        "durationInvalidLength": "The duration must be between {min} and {max}.",
+        "rolePriority": "You can't perform this action on a user with a higher or equal priority to yours"
+    },
+    "timeout": {
+        "name": "timeout",
+        "desc": "Timeout an user.",
+        "options": {
+            "user": "user",
+            "userDesc": "The user you are timing out",
+            "duration": "duration",
+            "durationDesc": "How long it will last (Format example: 5d 2h)",
+            "reason": "reason",
+            "reasonDesc": "Why you are timing out this user"
+        },
+        "noReason": "No reason specified.",
+        "stafferMessage": "You put {member} in timeout for {duration}",
+        "embed": {
+            "title": "Timeout",
+            "target": "Target",
+            "duration": "Duration",
+            "reason": "Reason"
+        }
+    }
+}
